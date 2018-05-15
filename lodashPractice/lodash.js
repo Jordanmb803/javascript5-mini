@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 var customers = [
   {
     id: 1,
@@ -75,6 +77,13 @@ var customers = [
 // first without using lodash's map (with property argument) method, then with it.
 
 //CODE HERE
+let custEmails = customers.map(cust => {
+  return cust.email
+})
+
+let custEmls = _.map(customers, (cust, index) => {
+  return cust.email
+})
 
 
 
@@ -97,6 +106,7 @@ var friendsOfJim = [
 ];
 var friendsOfBetty = [
   "Burt",
+  "Burt",
   "Dave",
   "Tina",
   "Biggie",
@@ -106,6 +116,8 @@ var friendsOfBetty = [
   "Tom",
   "Nancy"
 ];
+
+
 
 // Jim and Betty are having a party, but they only want to invite mutual friends.
 // Create an array of mutual friends. First without using lodash.
